@@ -1,0 +1,210 @@
+                          # Exercise_01
+
+### Part_01
+
+# for i in range(3):
+#     print("hi", i)
+
+
+### Part_02
+
+# x = 0
+# for i in range(1, 4):
+#     x += i * 2
+# print(x)  # ----> print(plus) all values of x
+
+
+### Part_03
+
+# for i in range(3, 0, -1):  # step(-1) btata hai keh hr round mai minus 1 ho ga, jaisy first digit is 3 to 3-1=2 ho ga next digit
+#     print(i, end="")
+
+
+### Part_04
+
+# for ch in "code":
+#     if ch == "d": break
+#     print(ch, end="")
+
+
+### Part_05
+
+# for i in range(6):
+#     if i % 3 == 0: continue    # % is modulus operator, it gives remainder after division-------> or agr condition true(0) ho gi to python usy skip kr dy ga ....isis liya output mai 0 and 3 missing hai
+#     print(i, end=" ")
+
+
+### Part_06
+
+# for i in range(2, 10, 3):   # -----> add 3 in first range to start and then add 3 in that least output by plus
+#     print(i, end=" ")
+
+
+
+
+                                   # Exercise_02
+
+
+# count = 1
+# while count <= 5  # infinite loop--------> colon is missing
+#     print(count)  # it will not change the value of count bc it is only 1 ...so it is infinite loop
+       # --------> Missing increment ( count += 1)
+
+# for i in range(1, 5):  # ---------> range should be(1,6)
+#     total = 0
+#     total += i  # yha pe total = 0 hai wo loop ky andr hai... matlab hr round mai Python total ko dobara zero kr daita hai
+# print("Sum of 1 to 5:", total)
+
+
+                                 # Answer----------->
+
+    
+# count = 1
+
+# while count <= 5:
+#     print(count)
+#     count += 1
+
+# total = 0
+
+# for i in range(1, 6):
+#     total += i
+
+# print("Sum of 1 to 5:", total)
+
+
+
+                                            # Exercise_03
+
+#  ------>   Write a game that:
+
+#  1. Picks a secret number from 1 to 10
+#  2. Keeps asking for a guess(while)
+#  3. Says "Too high" or "Too low" (if-elif)
+#  4. Stops when correct (break)
+#  5. Prints how many tries it took (counter)
+
+
+# import random
+# secret = random.randint(1, 10)
+
+#                              # Answer------>
+
+
+# import random
+
+# secret = random.randint(1, 10)
+# tries = 0
+
+# while True:
+#     guess = int(input("Guess (1-10): "))
+#     tries += 1
+
+#     if guess < secret:
+#         print("Too low")
+
+#     elif guess > secret:
+#         print("Too high")
+
+#     else:
+#         print("Correct! You took", tries, "tries")
+#         break
+
+
+
+
+
+
+                                #  Task_03
+
+
+### T_1   ------>  Multiplication table
+
+
+num = int(input("Enter a number: "))
+
+for i in range(1, 11):
+    print(num, "x", i, "=", num * i)
+
+
+### T_2   --------->  Predict the Outputs of Loop Snippets
+
+
+                        # Code: 01
+
+for i in range(1, 5):
+    print(i)
+
+                        # Code: 2 -----> sum
+
+total = 0
+
+for i in range(1, 6):
+    total += i
+
+print(total)
+
+
+
+### T_3   ------->  Fix the Bugs
+
+
+count = 1
+
+while count <= 5:
+    print(count)
+    count += 1
+
+total = 0
+
+for i in range(1, 6):
+    total += i
+
+print("Sum of 1 to 5:", total)
+
+
+
+### T_4 -----------> Character Counter
+
+
+
+name = input("Write your name: ")
+
+vowels = 0
+digits = 0
+spaces = 0
+
+for ch in name.lower():
+    if ch in "aeiou":
+        vowels += 1
+    elif ch.isdigit():
+        digits += 1
+    elif ch == " ":
+        spaces += 1
+
+print(f"Total vowels: {vowels}")
+print(f"Total digits: {digits}")
+print(f"Total spaces: {spaces}")
+
+
+
+### T_5 ------> Your Field (Biology)
+
+
+dna = input("Enter DNA sequence: ")
+
+dna = dna.upper()
+
+gc_count = 0
+
+for base in dna:
+    if base == "G" or base == "C":
+        gc_count += 1
+
+gc_content = (gc_count / len(dna)) * 100   # to calculate the GC percentage
+
+print("GC Count:", gc_count)
+print("GC Content:", gc_content, "%")
+
+
+
